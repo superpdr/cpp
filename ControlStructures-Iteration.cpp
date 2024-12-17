@@ -17,6 +17,12 @@
         
         While Loop : 
             entry control loop 
+        Do While Loop :
+            exit control loop ; At least one time execution 
+            do 
+            {
+            }while(condition);
+             
 
 
 */
@@ -26,10 +32,12 @@ using namespace std;
 
 void For_Test();
 void While_Test();
+void Do_While_Test();
 int main()
 {
    // For_Test();
-   While_Test();
+//    While_Test();
+    Do_While_Test();
     return 0;
 }
 
@@ -57,4 +65,25 @@ void While_Test()
         if (a == 10)
             flag = false ;
     }
+}
+
+void Do_While_Test()
+{
+    // int a = 0;
+    // bool flag = true;
+    
+    // do
+    // {
+    //     cout << a << endl;
+    //     a++ ;
+
+    // }while(a <= 10);
+
+    int number ;
+    do 
+    {
+        cout << "enter the number : "<<endl;
+        cin >> number ;
+    }while(number < 0 || number > 5 );
+    cout << "Thanks for the correct llimit "<<endl;
 }
