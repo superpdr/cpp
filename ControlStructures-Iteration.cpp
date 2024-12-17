@@ -14,7 +14,9 @@
         
         For Loop :
             for multiple condition check for multiple variable separated by comma then only the last statement will be checked  
-
+        
+        While Loop : 
+            entry control loop 
 
 
 */
@@ -23,10 +25,11 @@
 using namespace std; 
 
 void For_Test();
-
+void While_Test();
 int main()
 {
-    For_Test();
+   // For_Test();
+   While_Test();
     return 0;
 }
 
@@ -41,4 +44,17 @@ void For_Test()
     cout << " end of iteration "<< endl;
     cout << " the sum is :" << sum  <<endl;
 
+}
+
+void While_Test()
+{
+    int a = 0 ;
+    bool flag = true ;
+    while(flag)
+    {
+        cout << a << endl ;
+        a++;
+        if (a == 10)
+            flag = false ;
+    }
 }
