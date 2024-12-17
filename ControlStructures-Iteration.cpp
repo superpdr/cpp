@@ -22,22 +22,35 @@
             do 
             {
             }while(condition);
+        Range Based for loop :
+            cpp 11 ;
+            specifically used on the collections 
+            for (range declaration : range expression)
+            {
+                statements ;
+            }
+            It is not index based - it will iterate every value in the range expression 
+
              
 
 
 */
 
 #include<iostream>
+#include<vector>
 using namespace std; 
 
 void For_Test();
 void While_Test();
 void Do_While_Test();
+void Range_Based_Loop_Test();
+
 int main()
 {
    // For_Test();
 //    While_Test();
-    Do_While_Test();
+    // Do_While_Test();
+    Range_Based_Loop_Test();
     return 0;
 }
 
@@ -86,4 +99,18 @@ void Do_While_Test()
         cin >> number ;
     }while(number < 0 || number > 5 );
     cout << "Thanks for the correct llimit "<<endl;
+}
+
+void Range_Based_Loop_Test()
+{
+    // int a[] = {1,2,3,4,5};
+    vector<int>number = {1,2,3,4,5};
+    // for(int itr : a)
+    // {
+    //     cout << itr <<endl;
+    // }
+     for(auto itr : number)
+    {
+        cout << itr <<endl;
+    }
 }
