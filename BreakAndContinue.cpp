@@ -14,6 +14,10 @@
             no termination condition 
             condition is there but it does not meet 
             condition is there and it asks to start over again 
+    Nested Loops : 
+        loop within a loop 
+        handle multidimensional data 
+
 
 
 */
@@ -91,7 +95,7 @@ void Continue_Statement_Test()
 
 void Infinite_Loop_Test()
 {
-    for (int i = 0 ; ; i++)
+    for (int i = 0 ; ; i++) // without termination 
     {
         cout << "Hi " ;
     }

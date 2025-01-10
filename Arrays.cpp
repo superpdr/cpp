@@ -10,6 +10,12 @@
     multi dimension Array :
                 datatype arrayname [size 1][size 2].....[size n ]
                 if the value are not provided then  the value would be set to zero
+                Memory representation : 
+                    contiguous memory allocation 
+                    pattern is - row major and column major saving 
+                                row major = raw wise saving 
+                                column major = column wise saving 
+                                the element remains same but the address of the same element changes 
 
 
 */
