@@ -20,9 +20,11 @@ vector :
 using namespace std;
 
 void Vector_Test();
+void Vector_Function_Test();
 int main()
 {
-    Vector_Test();
+    // Vector_Test();
+   Vector_Function_Test();
     return 0 ;
 }
 
@@ -50,6 +52,31 @@ void Vector_Test()
 
      vector<int > trial = {0,1,2,3,4,5};
         // cout << "number with bound chekc with function at "<< trial.at(3);
-           cout << trial.at(10);
+        //    cout << trial.at(10);
 
+
+
+
+}
+
+void Vector_Function_Test()
+{
+    vector<int> v = {10,20,30,40,50,60};
+    // iterator is a pointing to the element in the vector 
+    vector<int>:: iterator itr ;
+    // for(itr = v.begin(); itr != v.end(); ++itr)
+    // {
+    //     cout << *itr <<endl;
+    // }
+    for (itr = v.end(); itr!=v.begin();)
+    {
+        --itr;
+        cout << *itr <<endl;
+    }
+    v.resize(3);
+    v.at(0)= 1111;
+    for (auto itr = v.begin();itr!=v.end();++itr)
+    {
+        cout << *itr <<endl ;
+    }
 }
