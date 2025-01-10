@@ -10,21 +10,41 @@ vector :
         vector provide bound checkin unlike array 
 
         usage : vector <object type > vector _name(size is optional)
-
+Pair :
+      set of two things
+      two  different types in one container 
+      order is fixed 
+      header file is <utility >   
+      usage : pair <datatype1 ,datatype2> pair_name ; 
 */
 
 
 
 #include<iostream>
 #include<vector>
+#include<utility>
 using namespace std;
 
 void Vector_Test();
 void Vector_Function_Test();
+void Pair_Test();
+void VectorOfPairs_Test();
+void ArraysOfVector_Test();
+
+
+void VectorsOfVector_Test();
+
+
+
 int main()
 {
     // Vector_Test();
-   Vector_Function_Test();
+//    Vector_Function_Test();
+//  Pair_Test();
+
+//  VectorOfPairs_Test();
+// ArraysOfVector_Test();
+VectorsOfVector_Test();
     return 0 ;
 }
 
@@ -79,4 +99,84 @@ void Vector_Function_Test()
     {
         cout << *itr <<endl ;
     }
+}
+
+void Pair_Test()
+{
+    pair<int , float> pr(23,2.3);
+    pair <int ,float >rp (11,1.1);
+    pair <int , string > pr1;
+
+    pr1 = make_pair(7 ,"ronaldo");
+    auto pr2 = make_pair("xxx", "xx");
+
+    pair<int , float> pr3(pr);
+    pair <bool ,string > pr4;
+    pr4.first = true;
+    pr4.second = "correct";
+
+    pr.swap(rp); 
+    cout << rp.first<<" "<<rp.second;
+
+}
+
+void VectorOfPairs_Test()
+{
+    vector< pair<int, string> > adata;
+    pair<int, string > p1,p2,p3;
+    p1={1,"one"};
+    p2.first= 2 ;
+    p2.second = "second";
+    p3 = make_pair(3, "three");
+
+    adata.push_back(p1);
+    adata.push_back(p2);
+    adata.push_back(p3);
+
+    for(auto itr = adata.begin(); itr!= adata.end();++itr)
+    {
+        cout << itr->first<< " "<< itr->second<<endl;
+    }
+}
+
+void ArraysOfVector_Test()
+{
+    // fixed rows and dynamic number of columns 
+    vector<int> array[3];
+    array[0].push_back(00);
+    array[0].push_back(01);
+    array[1 ]= {10,11,12,13};
+    array[2].push_back(30);
+
+    for (int i =0 ; i<3; ++i)
+    {
+        for (int j =0; j<array[i].size();++j)
+        {
+            cout << array[i][j]<< " "<<endl;
+        }
+        cout <<"\n";
+    }
+
+
+}
+
+void VectorsOfVector_Test()
+{
+    // rows and columns both are dynamic 
+
+    vector <vector <int> > v ;
+
+    v.push_back({1,2,3,4});
+    v.push_back({1});
+
+    for (int i =0 ; i< v.size(); ++i)
+    {
+        for (auto itr = v[i].begin();itr!=v[i].end(); ++itr)
+        {
+            cout << *itr << " ";
+        }
+        cout <<'\n';
+    }
+
+
 }
