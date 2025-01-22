@@ -64,8 +64,20 @@
                             {
                             }
                         }
-
             
+    Friend function : 
+                    not a member of class 
+                    It can access the private and protected members of class
+                    keyword : friend 
+                    declared in class but implementation outside the class 
+
+                    syntax :
+                        friend returnType functionName( class ref )
+    
+    Friend class : 
+                    friend class can access all orivate and protected members of tha class of which it is friend 
+                    syntax : 
+                        friend class className ; 
 
 */
 
