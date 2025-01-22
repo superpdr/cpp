@@ -24,8 +24,10 @@ Functions :
                                 call by referrence :
                                                 this is done by : using referrence or by using the pointers 
                                                 here values are passed by referrence . 
-                                                referrence is passed by address of operator 
-
+                                              referrence is passed by address of operator 
+            
+            inline function : simple fucntion to avoid overhead 
+            recursive function : function calling itself 
 
 */
 
@@ -39,6 +41,10 @@ void callByValue(int );
 void sum();
 int sum_withreturntype(int , int );
 void display (string name );
+
+inline void inline_Function ();
+
+int Factorial_usingRecursion(int );
 string display();
 
 int main()
@@ -49,10 +55,10 @@ int main()
 //    string s = display ();
 //     cout << s <<endl;
 
-      int a = 10 ;
-      cout << " before modification "<<a <<endl;
-      FunctionCallPtr(&a);
-      cout <<"after modification "<<a << endl ;
+    //   int a = 10 ;
+    //   cout << " before modification "<<a <<endl;
+    //   FunctionCallPtr(&a);
+    //   cout <<"after modification "<<a << endl ;
 
     // call by referrence 
     // int a = 100;
@@ -60,7 +66,11 @@ int main()
     // a =50 ;
     // (addressof(a)== addressof(b)) ? cout<<"same"<<endl: cout << "not same "<<endl;
     // cout << " b = "<<b <<endl;
-    return 0;
+
+    // inline_Function();
+    int fact = Factorial_usingRecursion(5);
+    cout << fact ;
+        return 0;
 }
 
 
@@ -109,4 +119,18 @@ void FunctionCallPtr(int* number)
 {
     *number = (*number)* 10;
     cout << "the value is multipleid "<<*number<<endl ;
+}
+
+void inline_Function()
+{
+    cout << " inline function used "<<endl ; 
+}
+
+int Factorial_usingRecursion(int num)
+{
+    if (num == 0 )
+    {
+        return 1 ;
+    }
+    return num*Factorial_usingRecursion(num -1 );
 }
