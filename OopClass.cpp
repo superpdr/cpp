@@ -79,6 +79,17 @@
                     syntax : 
                         friend class className ; 
 
+    abstraction : 
+                    technique to hide unneccessary data and show only necessary data 
+                    through access specifiers .
+
+    encapsulation : 
+                     technique to wrap the data member and member functionn into a single unit . 
+
+                     purpose is to secure the data .
+                     100% secure - encapsulation 
+                     50% secure - abstraction 
+
 */
 
 
