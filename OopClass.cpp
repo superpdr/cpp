@@ -90,6 +90,105 @@
                      100% secure - encapsulation 
                      50% secure - abstraction 
 
+    Inheritance : 
+                    one class access the property of other class 
+                    codse reusability 
+                    typeas :
+                        single : one base and one derived class 
+                                syntax : 
+                                        class A {// implementation };
+                                        class B : public A { // implementation };
+
+                        multi level inheritance :
+                                    syntacx : 
+                                            class A {
+                                             a+b ;
+                                             };
+                                            
+                                            class B : public A 
+                                            { a-b ;
+                                            }
+                                            
+                                            class c : class B 
+                                            {
+                                                a*b ;
+                                                a/b ;
+                                            }
+
+                        multiple inheritance : 
+                                            one or more  base class and single derived class 
+                                            
+                                            syntax : 
+                                                      class A {
+                                                                 a+b ;
+                                                                };
+                                            
+                                            class B 
+                                            { a-b ;
+                                            }
+                                            
+                                            class c 
+                                            {
+                                                a*b ;
+                                                a/b ;
+                                            }
+
+                                            class D : public A , public B , public C 
+                                            {
+                                                a>b ; 
+                                                a<b ;
+                                            };
+                        
+                        hierarchical inheritance : 
+                                            one base class and then multiple class derive it 
+
+                                            syntax :
+                                                    class A { a+b };
+
+                                                    class B : public A { a-b };
+                                                    class C : public A { a *b } ;
+                        
+                        polymorphism : 
+                                    same object having different behavior
+
+                                    complile time (function overloading )
+                                    run time (function overriding )
+
+
+                                    function overloading : 
+                                                class having method with same name but different parameters 
+                                                early binding static polymorphism
+                                                syntax :
+                                                    class A 
+                                                    {
+                                                      public : 
+                                                            void add (){}
+                                                            void add (int a ){}
+                                                            void add (int a , float b ){}
+                                                    
+                                                    } 
+                                    function overriding : 
+                                                 whenever we write a method with same name and parameters in the base adn derived class then it is overriding 
+                                                 inheritance is required for it 
+
+                                                 syntax :
+                                                    class A 
+                                                    {
+                                                    public :
+                                                        void add ()
+                                                        {
+                                                        }
+                                                    }        
+                                                    class B : public A 
+                                                    {
+                                                     public :
+                                                     void add ()
+                                                     {
+                                                     }
+                                                    }
+
+
+  
 */
 
 
